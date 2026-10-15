@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sathiya Janani S | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="cursor-glow"></div>
+<canvas id="aurora-canvas"></canvas>
+
+<!-- COMMAND PANEL (side) -->
+<div class="cmd-panel" id="cmdPanel">
+  <div class="cmd-toggle" onclick="toggleCmd()" title="Quick Nav">
+    <i class="fas fa-terminal"></i>
+  </div>
+  <div class="cmd-box" id="cmdBox">
+    <p class="cmd-label">// Quick Nav</p>
+    <div class="cmd-list">
+      <button onclick="cmdGo('hero')"><span class="cmd-arrow">→</span> home</button>
+      <button onclick="cmdGo('about')"><span class="cmd-arrow">→</span> about</button>
+      <button onclick="cmdGo('skills')"><span class="cmd-arrow">→</span> skills</button>
+      <button onclick="cmdGo('projects')"><span class="cmd-arrow">→</span> projects</button>
+      <button onclick="cmdGo('internship')"><span class="cmd-arrow">→</span> internship</button>
+      <button onclick="cmdGo('certifications')"><span class="cmd-arrow">→</span> certs</button>
+      <button onclick="cmdGo('education')"><span class="cmd-arrow">→</span> education</button>
+      <button onclick="cmdGo('extra')"><span class="cmd-arrow">→</span> activities</button>
+      <button onclick="cmdGo('contact')"><span class="cmd-arrow">→</span> contact</button>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">SJ<span>.</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+      <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+      <li><a href="#internship" onclick="closeMenu()">Internship</a></li>
+      <li><a href="#certifications" onclick="closeMenu()">Certs</a></li>
+      <li><a href="#education" onclick="closeMenu()">Education</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="section hero-section" id="hero">
+  <div class="hero-wrap container">
+    <div class="hero-left">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1 class="hero-name">Sathiya<br/><em>Janani S</em></h1>
+      <p class="hero-role"><span id="typedRole"></span></p>
+      <p class="hero-college">National Engineering College, Kovilpatti &nbsp;·&nbsp; CGPA 8.05</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-solid">View Projects</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/SathiyaJanani" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sathiya-janani-s1112" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/SathiyaJanani_S/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+        <a href="mailto:sathiyajanani1112@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-outer" id="photoOuter">
+        <div class="photo-ring"></div>
+        <div class="photo-ring2"></div>
+        <div class="photo-spotlight" id="photoSpotlight"></div>
+        <div class="photo-wrap" id="photoWrap">
+          <div class="photo-glow" id="photoGlow"></div>
+          <img id="heroPhoto" src="" alt="Sathiya Janani S" class="hero-photo"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-down" onclick="cmdGo('about')">
+    <span>Scroll</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section class="section about-section" id="about">
+  <div class="container">
+    <p class="sec-label">Who I Am</p>
+    <h2 class="sec-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a Computer Science & Engineering student driven by a love for problem-solving and clean code. With a strong foundation in C++, Java, Python, and web technologies, I build solutions that are functional and thoughtful.</p>
+        <p>A positive thinker with strong time management skills, I balance academics, certifications, and personal projects while maintaining academic excellence.</p>
+        <p>Beyond code, I'm a trained <strong>classical dancer</strong> and a passionate <strong>swimmer</strong> — disciplines that have taught me discipline, grace, and perseverance.</p>
+        <div class="about-traits">
+          <span>✦ Positive Thinker</span>
+          <span>✦ Time Manager</span>
+          <span>✦ Quick Learner</span>
+          <span>✦ Team Player</span>
+          <span>✦ Classical Dancer</span>
+          <span>✦ Swimmer</span>
+        </div>
+      </div>
+      <div class="about-stats reveal">
+        <div class="stat"><span class="stat-n">8.05</span><span class="stat-l">CGPA</span></div>
+        <div class="stat"><span class="stat-n">15+</span><span class="stat-l">Certifications</span></div>
+        <div class="stat"><span class="stat-n">2</span><span class="stat-l">Projects Built</span></div>
+        <div class="stat"><span class="stat-n">2<sup>nd</sup></span><span class="stat-l">Games of Code</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SKILLS ══════════ -->
+<section class="section skills-section dark-sec" id="skills">
+  <div class="container">
+    <p class="sec-label light">What I Use</p>
+    <h2 class="sec-title light">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fas fa-code"></i></div>
+        <h3>Programming</h3>
+        <div class="skill-tags"><span>C</span><span>C++</span><span>Java</span><span>Python</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fas fa-globe"></i></div>
+        <h3>Web Development</h3>
+        <div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+        <h3>Core Subjects</h3>
+        <div class="skill-tags"><span>DSA</span><span>DBMS</span><span>DAA</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+        <h3>Platforms</h3>
+        <div class="skill-tags"><span>Skillrack</span><span>HackerRank</span><span>LeetCode</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<section class="section projects-section" id="projects">
+  <div class="container">
+    <p class="sec-label">What I Built</p>
+    <h2 class="sec-title">Projects</h2>
+    <div class="projects-scroll-wrap">
+      <div class="projects-track" id="projectsTrack">
+
+        <div class="project-slide">
+          <div class="project-card reveal">
+            <div class="proj-num">01</div>
+            <div class="proj-badge cpp">C++</div>
+            <h3>Patient Management System</h3>
+            <p>A console-based system with OOP concepts and file handling for efficient patient data management with a menu-driven interface.</p>
+            <ul class="proj-features">
+              <li>OOP concepts & file handling</li>
+              <li>Patient record management</li>
+              <li>Menu-driven interface</li>
+              <li>Bill generation & admin login</li>
+            </ul>
+            <div class="proj-tech"><span>C++</span><span>OOP</span><span>File I/O</span></div>
+            <a href="https://github.com/SathiyaJanani" target="_blank" class="proj-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-slide">
+          <div class="project-card featured reveal">
+            <div class="proj-num">02</div>
+            <div class="proj-badge web">HTML · CSS · JS · Springboot</div>
+            <h3>Online GoldChit Management System</h3>
+            <p>A full web-based Gold Chit management platform with secure authentication, role-based access, and automated installment tracking.</p>
+            <ul class="proj-features">
+              <li>Secure user authentication</li>
+              <li>Role-based access control</li>
+              <li>Automated installment tracking</li>
+              <li>Payment management processes</li>
+            </ul>
+            <div class="proj-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Springboot</span></div>
+            <a href="https://github.com/SathiyaJanani/GoldChitManagementSystemusingSpringboot-" target="_blank" class="proj-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="proj-controls">
+        <button class="proj-btn" onclick="scrollProjects(-1)"><i class="fas fa-chevron-left"></i></button>
+        <div class="proj-dots">
+          <span class="proj-dot active" onclick="goToProject(0)"></span>
+          <span class="proj-dot" onclick="goToProject(1)"></span>
+        </div>
+        <button class="proj-btn" onclick="scrollProjects(1)"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ INTERNSHIP ══════════ -->
+<section class="section internship-section" id="internship">
+  <div class="container">
+    <p class="sec-label">Experience</p>
+    <h2 class="sec-title">Internship</h2>
+    <div class="internship-cards">
+      <div class="internship-card reveal">
+        <div class="intern-top">
+          <div class="intern-role-wrap">
+            <div class="intern-badge"><i class="fas fa-microchip"></i> AI Intern</div>
+            <h3 class="intern-company">Decode Labs</h3>
+          </div>
+          <div class="intern-duration">
+            <i class="far fa-clock"></i> 1 Month
+          </div>
+        </div>
+        <div class="intern-domain-box">
+          <span class="domain-label">Domain:</span>
+          <span class="domain-value">Artificial Intelligence</span>
+        </div>
+        <p class="intern-desc">Completed a 1-month internship at Decode Labs focusing on Artificial Intelligence, working on foundational AI algorithms, machine learning workflows, and practical problem-solving.</p>
+        <div class="intern-tags">
+          <span>Artificial Intelligence</span>
+          <span>Machine Learning</span>
+          <span>Python</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CERTIFICATIONS ══════════ -->
+<section class="section cert-section dark-sec" id="certifications">
+  <div class="container">
+    <p class="sec-label light">Credentials</p>
+    <h2 class="sec-title light">Certifications</h2>
+
+    <div class="cert-group-title">NPTEL</div>
+    <div class="cert-grid">
+      <div class="cert-card reveal" onclick="openViewer('python')">
+        <div class="cert-provider">NPTEL</div>
+        <div class="cert-name">Joy of Computing with Python</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('cloud')">
+        <div class="cert-provider">NPTEL</div>
+        <div class="cert-name">Cloud Computing</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('english')">
+        <div class="cert-provider">NPTEL</div>
+        <div class="cert-name">Technical English for Engineers</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('ml')">
+        <div class="cert-provider">NPTEL</div>
+        <div class="cert-name">Introduction to Machine Learning</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('iot')">
+        <div class="cert-provider">NPTEL</div>
+        <div class="cert-name">IoT &amp; Cloud Computing</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('iiot')">
+        <div class="cert-provider">NPTEL</div>
+        <div class="cert-name">Industrial IoT (IIoT 4.0)</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+    </div>
+
+    <div class="cert-group-title">Infosys SpringBoard</div>
+    <div class="cert-grid">
+      <div class="cert-card reveal" onclick="openViewer('oracle')">
+        <div class="cert-provider">Oracle Academy</div>
+        <div class="cert-name">DBMS – Oracle Academy</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('genai_inf')">
+        <div class="cert-provider">Infosys SpringBoard</div>
+        <div class="cert-name">Generative AI</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('cps')">
+        <div class="cert-provider">Infosys SpringBoard</div>
+        <div class="cert-name">Computational Problem Solving</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('genai_amz')">
+        <div class="cert-provider">Amazon</div>
+        <div class="cert-name">Generative AI – Amazon</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+    </div>
+
+    <div class="cert-group-title">SoloLearn &amp; Web</div>
+    <div class="cert-grid">
+      <div class="cert-card reveal" onclick="openViewer('intro_c')">
+        <div class="cert-provider">SoloLearn</div>
+        <div class="cert-name">Introduction to C</div>
+        <div class="cert-view"><i class="fas fa-image"></i> View Certificate</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('intro_cpp')">
+        <div class="cert-provider">SoloLearn</div>
+        <div class="cert-name">Introduction to C++</div>
+        <div class="cert-view"><i class="fas fa-image"></i> View Certificate</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('html5')">
+        <div class="cert-provider">Web Certification</div>
+        <div class="cert-name">HTML5 Certificate</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('css3')">
+        <div class="cert-provider">Web Certification</div>
+        <div class="cert-name">CSS3 Certificate</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+      <div class="cert-card reveal" onclick="openViewer('js')">
+        <div class="cert-provider">Web Certification</div>
+        <div class="cert-name">JavaScript Certificate</div>
+        <div class="cert-view"><i class="fas fa-file-pdf"></i> View PDF</div>
+      </div>
+    </div>
+
+    <!-- Resume Download -->
+    <div class="resume-block reveal">
+      <div class="resume-info">
+        <i class="fas fa-file-user"></i>
+        <div>
+          <div class="resume-title">My Resume</div>
+          <div class="resume-sub">Click to view full resume</div>
+        </div>
+      </div>
+      <button class="resume-btn" onclick="openViewer('resume')">
+        <i class="fas fa-eye"></i> View Resume
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- VIEWER MODAL (PDF + Image) -->
+<div class="viewer-modal" id="viewerModal" onclick="closeViewerOut(event)">
+  <div class="viewer-inner">
+    <button class="viewer-close" onclick="closeViewer()"><i class="fas fa-times"></i></button>
+    <div class="viewer-body" id="viewerBody"></div>
+  </div>
+</div>
+
+<!-- ══════════ EDUCATION ══════════ -->
+<section class="section edu-section" id="education">
+  <div class="container">
+    <p class="sec-label">My Journey</p>
+    <h2 class="sec-title">Education</h2>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <span class="tl-year">2024 – 2028</span>
+          <h3>B.E. Computer Science Engineering</h3>
+          <p class="tl-school">National Engineering College, Kovilpatti</p>
+          <p class="tl-grade">CGPA: 8.05 (up to 4th Semester)</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <span class="tl-year">2024</span>
+          <h3>Higher Secondary (12th)</h3>
+          <p class="tl-school">SHN Ethel Harvey Girls HR Sec School, Sattur</p>
+          <p class="tl-grade">81.5%</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <span class="tl-year">2022</span>
+          <h3>SSLC (10th)</h3>
+          <p class="tl-school">SHN Ethel Harvey Girls He Sec School, Sattur</p>
+          <p class="tl-grade">89.2%</p>
+        </div>
+      </div>
+    </div>
+    <div class="achievement reveal">
+      <div class="ach-icon">🏆</div>
+      <div><strong>Games of Code</strong> — 2nd Prize at Kumaraguru College of Technology</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EXTRA CURRICULAR ══════════ -->
+<section class="section extra-section dark-sec" id="extra">
+  <div class="container">
+    <p class="sec-label light">Beyond Code</p>
+    <h2 class="sec-title light">Extra Curricular</h2>
+    <div class="extra-grid">
+      <div class="extra-card dance reveal">
+        <div class="extra-emoji">💃</div>
+        <div class="extra-content">
+          <h3>Classical Dancer</h3>
+          <p>Trained in classical dance forms. Dance has sharpened my discipline, expression, and performance presence — the same precision I bring to my code.</p>
+          <div class="extra-tags"><span>Discipline</span><span>Artistry</span><span>Performance</span></div>
+        </div>
+      </div>
+      <div class="extra-card swim reveal">
+        <div class="extra-emoji">🏊</div>
+        <div class="extra-content">
+          <h3>Swimmer</h3>
+          <p>Swimming builds resilience and mental strength — the same focus needed to debug a complex problem. The pool teaches patience, rhythm, and persistence.</p>
+          <div class="extra-tags"><span>Endurance</span><span>Focus</span><span>Resilience</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <p class="sec-label">Let's Talk</p>
+    <h2 class="sec-title">Get In Touch</h2>
+    <p class="contact-intro">Open to internship opportunities, project collaborations, and tech conversations.</p>
+    <div class="contact-grid">
+      <a href="tel:9342700113" class="contact-card reveal">
+        <i class="fas fa-phone"></i>
+        <div><span class="c-label">Phone</span><span class="c-val">9342700113</span></div>
+      </a>
+      <a href="mailto:sathiyajanani1112@gmail.com" class="contact-card reveal">
+        <i class="fas fa-envelope"></i>
+        <div><span class="c-label">Email</span><span class="c-val">sathiyajanani1112@gmail.com</span></div>
+      </a>
+      <a href="https://www.linkedin.com/in/sathiya-janani-s1112" target="_blank" class="contact-card reveal">
+        <i class="fab fa-linkedin-in"></i>
+        <div><span class="c-label">LinkedIn</span><span class="c-val">sathiya-janani-s1112</span></div>
+      </a>
+      <a href="https://github.com/SathiyaJanani" target="_blank" class="contact-card reveal">
+        <i class="fab fa-github"></i>
+        <div><span class="c-label">GitHub</span><span class="c-val">SathiyaJanani</span></div>
+      </a>
+      <a href="https://leetcode.com/u/SathiyaJanani_S/" target="_blank" class="contact-card reveal">
+        <i class="fas fa-code"></i>
+        <div><span class="c-label">LeetCode</span><span class="c-val">SathiyaJanani_S</span></div>
+      </a>
+      <div class="contact-card no-link reveal">
+        <i class="fas fa-map-marker-alt"></i>
+        <div><span class="c-label">Address</span><span class="c-val">3/382, East Street, A.Ramalingapuram, Sattur – 626203</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">SJ<span>.</span></div>
+    <p>Designed & Built by Sathiya Janani S</p>
+    <p class="footer-sub">CSE Student · NEC Kovilpatti · 2024–2028</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
